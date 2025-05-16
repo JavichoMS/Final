@@ -1,0 +1,91 @@
+.menu {
+    position: relative;
+    width: 100%;
+}
+
+.matricula {
+    color: brown; /* Color marrón para MATRÍCULA 2025 */
+    font-weight: bold; /* Negrita para destacar */
+    display: inline-block; /* Necesario para aplicar transformaciones correctamente */
+    animation: bounce 2s infinite; /* Llama a la animación bounce */
+}
+
+@keyframes bounce {
+    0%, 20%, 50%, 80%, 100% {
+        transform: translateY(0);
+    }
+    40% {
+        transform: translateY(-10px); /* Sube 10px */
+    }
+    60% {
+        transform: translateY(-5px); /* Sube 5px */
+    }
+}
+
+.logo {
+    color: white;
+    font-size: 25px;
+    font-weight: 800;
+}
+
+.menu-icono {
+    width: 50px;
+}
+
+.footer-content {
+    display: flex;
+    justify-content: space-between; /* Espacio entre columnas */
+    flex-wrap: wrap; /* Permite que las columnas se ajusten en pantallas pequeñas */
+    padding: 20px; /* Espaciado alrededor del footer */
+    background-color: black; /* Color de fondo para el footer */
+    color: white; /* Color de texto */
+}
+
+.link {
+    flex: 1; /* Hace que cada columna ocupe el mismo ancho */
+    min-width: 150px; /* Ancho mínimo para las columnas */
+    margin: 10px; /* Espacio entre columnas */
+}
+
+.link h3 {
+    font-size: 18px;
+    color: rgba(56, 128, 223, 0.836);
+    margin-bottom: 15px;
+}
+
+.link a {
+    font-size: 16px;
+    color: white;
+    display: block;
+    margin-bottom: 10px;
+    text-decoration: none; /* Elimina el subrayado */
+}
+
+.link a:hover {
+    color: crimson; /* Resalta los links al pasar */
+}
+
+/* Ajuste del logo */
+.colegio {
+    width: 150px; /* Ajusta el tamaño del logo */
+    margin-top: 15px;
+    display: flex;
+    justify-content: center; /* Centra horizontalmente */
+    margin-left: auto; /* Elimina márgenes en los costados */
+    margin-right: auto; /* Elimina márgenes en los costados */
+}
+
+@media (max-width: 576px) { /* Para pantallas pequeñas */
+    .colegio {
+        width: 100%; /* Ocupar el 100% del ancho del contenedor */
+        text-align: center; /* Asegura que el contenido esté centrado */
+    }
+
+    .navbar-brand {
+        display: flex;
+        align-items: center;
+    }
+    .navbar-toggler {
+        margin-left: auto; /* Mantiene el botón del menú en el extremo derecho */
+    }
+}

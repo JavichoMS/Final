@@ -1,0 +1,12 @@
+    /* Estilos para los botones seleccionados */
+    .btn-selected {
+        background-color: white;
+        color: rgb(34, 33, 33);
+        border-color: #0859a5;
+    }
+    
+    .btn-unselected {
+        background-color: #0859a5;
+        color: white;
+        border-color: #0859a5;
+    }

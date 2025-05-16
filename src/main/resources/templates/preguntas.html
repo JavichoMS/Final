@@ -1,0 +1,323 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>I.E.P San Agustin - Preguntas Frecuentes</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" th:href="@{/css/stylePreguntas.css}">
+    <link rel="stylesheet" th:href="@{/css/FRAGMENTS.css}">
+</head>
+<body>
+
+    <!-- ENCABEZADO -->
+    <div th:replace="fragments :: header"></div>
+
+    <br><center><h2>Preguntas Frecuentes</h2></center>
+
+    <div class="container my-4">
+    <div class="d-flex justify-content-center mb-3">
+        <button id="btnPropuesta" class="btn btn-unselected mx-2" onclick="showContent('propuesta')">Propuesta Educativa</button>
+        <button id="btnMatricula" class="btn btn-unselected mx-2" onclick="showContent('matricula')">Matrícula</button>
+    </div>
+
+    <!-- Propuesta Educativa -->
+    <div id="propuesta" class="mt-4">
+        <h3>Propuesta Educativa - I.E.P San Agustin</h3>
+        <div class="accordion" id="accordionPropuesta">
+            <!-- Preguntas de Propuesta Educativa -->
+            <div class="accordion-item">
+                <h2 class="accordion-header" id="heading1">
+                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapse1">
+                    ¿Cuál es nuestra propuesta educativa?
+                </button>
+                </h2>
+                <div id="collapse1" class="accordion-collapse collapse" data-bs-parent="#accordionPropuesta">
+                <div class="accordion-body">
+                    Nuestra propuesta educativa busca formar estudiantes íntegros con habilidades académicas y valores éticos, promoviendo un aprendizaje continuo y autónomo.
+                </div>
+                </div>
+    </div>
+    
+        <div class="accordion-item">
+        <h2 class="accordion-header" id="heading2">
+            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapse2">
+            ¿Evalúan permanentemente a los alumnos?
+            </button>
+        </h2>
+        <div id="collapse2" class="accordion-collapse collapse" data-bs-parent="#accordionPropuesta">
+            <div class="accordion-body">
+            Sí, los alumnos son evaluados mediante tareas, prácticas y evaluaciones finales para asegurar su progreso y adaptación al sistema.
+            </div>
+        </div>
+    </div>
+    
+    <div class="accordion-item">
+        <h2 class="accordion-header" id="heading3">
+        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapse3">
+            ¿Cómo se desarrolla el curso de inglés?
+        </button>
+        </h2>
+        <div id="collapse3" class="accordion-collapse collapse" data-bs-parent="#accordionPropuesta">
+        <div class="accordion-body">
+            El curso de inglés se imparte desde un enfoque comunicativo, desarrollando habilidades de comprensión y expresión tanto oral como escrita.
+        </div>
+        </div>
+    </div>
+    
+    <div class="accordion-item">
+        <h2 class="accordion-header" id="heading4">
+        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapse4">
+            ¿En I.E.P San Agustin se enseña el curso de religión?
+        </button>
+        </h2>
+        <div id="collapse4" class="accordion-collapse collapse" data-bs-parent="#accordionPropuesta">
+        <div class="accordion-body">
+            Sí, se imparte un curso de religión con el objetivo de inculcar valores éticos y morales, así como el respeto hacia las creencias.
+        </div>
+        </div>
+    </div>
+    
+    <div class="accordion-item">
+        <h2 class="accordion-header" id="heading5">
+        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapse5">
+            Mi hijo(a) no es bueno(a) en matemáticas. ¿Se adaptará al nivel académico de I.E.P San Agustin?
+        </button>
+        </h2>
+        <div id="collapse5" class="accordion-collapse collapse" data-bs-parent="#accordionPropuesta">
+        <div class="accordion-body">
+            Sí, ofrecemos apoyo académico en matemáticas para asegurar que cada estudiante pueda adaptarse y progresar de acuerdo con sus habilidades.
+        </div>
+        </div>
+    </div>
+    
+    <div class="accordion-item">
+        <h2 class="accordion-header" id="heading6">
+        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapse6">
+            Sobre las asesorías
+        </button>
+        </h2>
+        <div id="collapse6" class="accordion-collapse collapse" data-bs-parent="#accordionPropuesta">
+        <div class="accordion-body">
+            Las asesorías son sesiones adicionales para reforzar el aprendizaje de los alumnos en áreas específicas donde necesiten apoyo.
+        </div>
+        </div>
+    </div>
+    
+    <div class="accordion-item">
+        <h2 class="accordion-header" id="heading7">
+        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapse7">
+            ¿Se entregan exámenes bimestrales?
+        </button>
+        </h2>
+        <div id="collapse7" class="accordion-collapse collapse" data-bs-parent="#accordionPropuesta">
+        <div class="accordion-body">
+            Sí, se realizan exámenes bimestrales para evaluar el rendimiento y progreso de los estudiantes de manera constante.
+        </div>
+        </div>
+    </div>
+    
+    <div class="accordion-item">
+        <h2 class="accordion-header" id="heading8">
+        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapse8">
+            ¿Existen normas sobre el corte de cabello de los alumnos?
+        </button>
+        </h2>
+        <div id="collapse8" class="accordion-collapse collapse" data-bs-parent="#accordionPropuesta">
+        <div class="accordion-body">
+            Sí, se establecen normas de presentación personal para promover un ambiente de respeto y orden en el colegio.
+        </div>
+        </div>
+    </div>
+    
+    <div class="accordion-item">
+        <h2 class="accordion-header" id="heading9">
+        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapse9">
+            ¿Existe una frecuente comunicación entre padres y docentes?
+        </button>
+        </h2>
+        <div id="collapse9" class="accordion-collapse collapse" data-bs-parent="#accordionPropuesta">
+        <div class="accordion-body">
+            Sí, fomentamos una comunicación abierta y constante entre padres y docentes para el seguimiento adecuado de cada alumno.
+        </div>
+        </div>
+    </div>
+    
+    <div class="accordion-item">
+        <h2 class="accordion-header" id="heading10">
+        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapse10">
+            ¿Los alumnos usan uniformes?
+        </button>
+        </h2>
+        <div id="collapse10" class="accordion-collapse collapse" data-bs-parent="#accordionPropuesta">
+        <div class="accordion-body">
+            Sí, el uso de uniforme es obligatorio para promover la igualdad y evitar distracciones en el entorno educativo.
+        </div>
+        </div>
+    </div>
+    
+    <div class="accordion-item">
+        <h2 class="accordion-header" id="heading11">
+        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapse11">
+            Calidad de la enseñanza de nuestros docentes
+        </button>
+        </h2>
+        <div id="collapse11" class="accordion-collapse collapse" data-bs-parent="#accordionPropuesta">
+        <div class="accordion-body">
+            Contamos con docentes altamente calificados y en constante capacitación para ofrecer una educación de calidad a nuestros alumnos.
+        </div>
+        </div>
+    </div>
+    
+    <div class="accordion-item">
+        <h2 class="accordion-header" id="heading12">
+        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapse12">
+            ¿Qué grado de credibilidad tienen sus servicios?
+        </button>
+        </h2>
+        <div id="collapse12" class="accordion-collapse collapse" data-bs-parent="#accordionPropuesta">
+        <div class="accordion-body">
+            Nuestros servicios educativos están avalados por años de experiencia y un historial de logros académicos de nuestros estudiantes.
+        </div>
+        </div>
+    </div>
+    </div>
+</div>
+
+<!-- Matrícula -->
+<div id="matricula" class="mt-4 d-none">
+    <h3>Matrícula - I.E.P San Agustin</h3>
+    <div class="accordion" id="accordionMatricula">
+    <!-- Preguntas de Matrícula -->
+    <div class="accordion-item">
+        <h2 class="accordion-header" id="heading13">
+        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapse13">
+            Traslados internos
+        </button>
+        </h2>
+        <div id="collapse13" class="accordion-collapse collapse" data-bs-parent="#accordionMatricula">
+        <div class="accordion-body">
+            Los traslados internos permiten a los estudiantes cambiar de sede manteniendo su historial académico.
+        </div>
+        </div>
+    </div>  
+    
+    <div class="accordion-item">
+        <h2 class="accordion-header" id="heading14">
+        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapse14">
+            Trámite para solicitar constancia de Tercio Superior
+        </button>
+        </h2>
+        <div id="collapse14" class="accordion-collapse collapse" data-bs-parent="#accordionMatricula">
+        <div class="accordion-body">
+            La constancia de Tercio Superior se solicita mediante un trámite administrativo para aquellos estudiantes con el rendimiento requerido.
+        </div>
+        </div>
+    </div>
+    
+    <div class="accordion-item">
+        <h2 class="accordion-header" id="heading15">
+        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapse15">
+            Código modular del colegio
+        </button>
+        </h2>
+        <div id="collapse15" class="accordion-collapse collapse" data-bs-parent="#accordionMatricula">
+        <div class="accordion-body">
+            El código modular del colegio es un identificador asignado por el Ministerio de Educación.
+        </div>
+        </div>
+    </div>
+    
+    <div class="accordion-item">
+        <h2 class="accordion-header" id="heading16">
+        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapse16">
+            ¿Qué edad deben tener los niños que se matriculen en 1er grado de primaria?
+        </button>
+        </h2>
+        <div id="collapse16" class="accordion-collapse collapse" data-bs-parent="#accordionMatricula">
+        <div class="accordion-body">
+            Los niños deben tener al menos 6 años cumplidos antes de marzo del año escolar en curso.
+        </div>
+        </div>
+    </div>
+    
+    <div class="accordion-item">
+        <h2 class="accordion-header" id="heading17">
+        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapse17">
+            ¿En qué consiste la prueba de conocimientos para los alumnos postulantes?
+        </button>
+        </h2>
+        <div id="collapse17" class="accordion-collapse collapse" data-bs-parent="#accordionMatricula">
+        <div class="accordion-body">
+            La prueba evalúa conocimientos básicos en matemáticas, comprensión lectora y ciencias según el grado al que el alumno postula.
+        </div>
+        </div>
+    </div>
+    
+    <div class="accordion-item">
+        <h2 class="accordion-header" id="heading18">
+        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapse18">
+            ¿Cómo puedo finalizar la matrícula online?
+        </button>
+        </h2>
+        <div id="collapse18" class="accordion-collapse collapse" data-bs-parent="#accordionMatricula">
+        <div class="accordion-body">
+            Puedes finalizar la matrícula online completando todos los datos requeridos y enviando los documentos escaneados en formato PDF.
+        </div>
+        </div>
+    </div>
+    
+    <div class="accordion-item">
+        <h2 class="accordion-header" id="heading19">
+        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapse19">
+            Si un exalumno desea regresar al colegio, ¿tendrá que ser evaluado nuevamente?
+        </button>
+        </h2>
+        <div id="collapse19" class="accordion-collapse collapse" data-bs-parent="#accordionMatricula">
+        <div class="accordion-body">
+            Sí, todos los exalumnos que desean reingresar al colegio deben someterse a una evaluación para asegurar su adaptación al nivel actual.
+        </div>
+        </div>
+    </div>
+</div>
+</div>
+</div>
+
+    <!-- APARTADO MATRICULA -->
+    <section class="info-matricula py-5 text-center">
+        <h2>I.E.P San Agustin</h2>
+        <p>Con 2 sedes en Lima, nuestro principal objetivo es brindar educación de alta calidad y fomentar el liderazgo</p>
+        <div class="container mt-4">
+            <div class="card mx-auto" style="max-width: 800px; background-color: #a6aaad;">
+                <div class="card-body d-flex align-items-center">
+                    <div class="text-left" style="flex: 1;">
+                        <h5 class="card-title">¿Quieres saber más sobre nuestro proceso de matrícula 2026?</h5>
+                        <a th:href="@{/iniciar-sesion}" target="_blank" class="btn btn-danger">Regístrate aquí</a>
+                    </div>
+                    <img th:src="@{/images/icon5.png}" class="img-fluid" alt="error" style="max-width: 150px; margin-left: 20px;">
+                </div>
+            </div>
+        </div>
+    </section>
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"></script>
+<script>
+  function showContent(section) {
+    const btnPropuesta = document.getElementById('btnPropuesta');
+    const btnMatricula = document.getElementById('btnMatricula');
+    if (section === 'propuesta') {
+      btnPropuesta.classList.replace('btn-unselected', 'btn-selected');
+      btnMatricula.classList.replace('btn-selected', 'btn-unselected');
+      document.getElementById('propuesta').classList.remove('d-none');
+      document.getElementById('matricula').classList.add('d-none');
+    } else {
+      btnMatricula.classList.replace('btn-unselected', 'btn-selected');
+      btnPropuesta.classList.replace('btn-selected', 'btn-unselected');
+      document.getElementById('matricula').classList.remove('d-none');
+      document.getElementById('propuesta').classList.add('d-none');
+    }
+  }
+</script>
+
+</body>
+</html>

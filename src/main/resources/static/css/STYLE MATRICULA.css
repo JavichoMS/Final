@@ -1,0 +1,98 @@
+body {
+    background-image: url('https://forbes.es/wp-content/uploads/2022/03/WhatsApp-Image-2022-03-09-at-6.15.12-PM-2-900x675.jpeg');
+     /* Imagen de fondo */
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+    color: #333333;
+}
+
+/* Fondo y contenedor del formulario */
+.form-container {
+    background-color: rgba(255, 255, 255, 0.9); /* Fondo blanco con opacidad */
+    padding: 20px;
+    border-radius: 15px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+}
+
+/* Estilo del encabezado de pasos */
+.step-header {
+    display: flex;
+    justify-content: space-around;
+    margin-bottom: 30px;
+    text-align: center;
+}
+
+.step-header div {
+    flex: 1;
+    font-weight: bold;
+    color: #6c757d;
+}
+
+.step-header div span {
+    display: inline-block;
+    width: 40px;
+    height: 40px;
+    line-height: 40px;
+    border-radius: 50%;
+    background-color: #ffc107;
+    color: white;
+    font-size: 1.2rem;
+    margin-bottom: 10px;
+}
+
+.step-header div.active span {
+    background-color: #0d6efd;
+}
+
+.step-header div.active {
+    color: #0d6efd;
+}
+
+/* Mejorar botones y inputs */
+.form-select,
+.form-control {
+    border: 2px solid #ffc107;
+    border-radius: 10px;
+}
+
+.form-label {
+    font-weight: bold;
+}
+
+button {
+    background-color: #0d6efd;
+    border: none;
+    border-radius: 15px;
+    padding: 10px 20px;
+    font-size: 1.2rem;
+    color: white;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+button:hover {
+    background-color: #004085;
+}
+
+.inicio {
+    background-color: #fffdfd; 
+    border: 2px solid #0d6efd;
+    border-radius: 15px; 
+    padding: 10px 20px; 
+    font-size: 1.2rem; 
+    color: #0d6efd; 
+    transition: background-color 0.3s ease; /* Transición para el cambio de color */
+    margin-top: 15px; 
+    text-decoration: none; 
+}
+
+.inicio:hover {
+    background-color: #6991bd9a; 
+}
+
+.inicio a {
+    text-decoration: none; 
+    display: block; 
+    height: 100%; 
+}

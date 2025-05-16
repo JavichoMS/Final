@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org" lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cursos I.E.P San Agustin</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" th:href="@{/css/style-cursos.css}" />
+</head>
+<body>
+
+    <!-- ENCABEZADO -->
+    <div th:replace="fragments :: header"></div>
+
+    <div class="container my-5">
+        <h1 class="text-center text-primary">Cursos Inicial-Primaria</h1>
+        <div class="row">
+            <div class="col-md-4">
+                <h4 class="text-primary">Cursos de Educación Inicial</h4>
+                <ul class="list-group">
+                    <li class="list-group-item" onclick="showCourse('curso_inicial1')">Desarrollo Personal</li>
+                    <li class="list-group-item" onclick="showCourse('curso_inicial2')">Comunicación</li>
+                    <li class="list-group-item" onclick="showCourse('curso_inicial3')">Matemática</li>
+                    <li class="list-group-item" onclick="showCourse('curso_inicial4')">Exploración del Entorno</li>
+                    <li class="list-group-item" onclick="showCourse('curso_inicial5')">Educación Artística</li>
+                    <li class="list-group-item" onclick="showCourse('curso_inicial6')">Educación Física</li>
+                    <li class="list-group-item" onclick="showCourse('curso_inicial7')">Educación en Tecnología</li>
+                    <li class="list-group-item" onclick="showCourse('curso_inicial8')">Educación Religiosa</li>
+                </ul>
+
+                <h4 class="mt-4 text-primary">Cursos de Educación Primaria</h4>
+                <ul class="list-group">
+                    <li class="list-group-item" onclick="showCourse('comunicacion')">Comunicación</li>
+                    <li class="list-group-item" onclick="showCourse('ingles')">Inglés</li>
+                    <li class="list-group-item" onclick="showCourse('ciencias sociales')">Ciencias Sociales</li>
+                    <li class="list-group-item" onclick="showCourse('matematicas')">Matemáticas</li>
+                    <li class="list-group-item" onclick="showCourse('historia')">Historia</li>
+                    <li class="list-group-item" onclick="showCourse('educacion religiosa')">Educación Religiosa</li>
+                    <li class="list-group-item" onclick="showCourse('arte')">Arte</li>
+                    <li class="list-group-item" onclick="showCourse('ciencias naturales')">Ciencias Naturales</li>
+                    <li class="list-group-item" onclick="showCourse('educacion fisica')">Educación Física</li>
+                </ul>
+            </div>
+            <div class="col-md-8">
+                <div id="course-description" class="mt-4">
+                    <h5 id="course-title">Seleccione un curso</h5>
+                    <p id="course-def" class="text-muted">Por favor, seleccione un curso de la lista para ver la descripción.</p>
+                </div>
+                <div id="course-carousel" class="carousel slide mt-4" data-bs-ride="carousel" style="display: none;">
+                    <div class="carousel-inner" id="carousel-images"></div>
+                    <button class="carousel-control-prev" type="button" data-bs-target="#course-carousel" data-bs-slide="prev">
+                        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                        <span class="visually-hidden">Previous</span>
+                    </button>
+                    <button class="carousel-control-next" type="button" data-bs-target="#course-carousel" data-bs-slide="next">
+                        <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                        <span class="visually-hidden">Next</span>
+                    </button>
+                </div>
+            </div>
+        </div>
+        <div class="text-center mt-4">
+            <a th:href="@{http://localhost:8080/}" class="btn btn-primary">Regresar</a>
+        </div>
+    </div>
+
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"></script>
+    <script th:src="@{/js/script.js}"></script>
+</body>
+</html>

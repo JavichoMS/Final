@@ -1,0 +1,159 @@
+@import url('https://fonts.googleapis.com/css2?family=Reddit+Sans:ital@0;1&display=swap');
+
+* {
+    box-sizing: border-box;
+    text-decoration: none;
+    list-style: none;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    font-family: 'Reddit Sans', sans-serif;
+    background:
+        url();
+    height: 100vh;
+    background-size: contain;
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.header {
+    background-image: linear-gradient(rgba(0, 0, 0, 0.7),
+            rgba(0, 0, 0, 0.7)),
+        url();
+    background-position: center bottom;
+    background-repeat: no-repeat;
+    background-size: cover;
+    min-height: 20vh;
+    display: flex;
+    align-items: center;
+    color: white;
+}
+
+
+
+.general {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px;
+    margin-bottom: 40px;
+    border: 2px solid #ccc; /* Borde alrededor del cuadro */
+    border-radius: 10px; /* Bordes redondeados */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Sombras para efecto de elevación */
+}
+
+.general-1, .general-4 {
+    flex: 1;
+    padding: 20px;
+    background-color: white; /* Fondo por defecto */
+}
+
+/* Colores diferentes para cada sede */
+.general-1:nth-child(1), .general-4:nth-child(1) {
+    background-color: #f0f8ff; /* Color para la primera sede */
+}
+
+.general-1:nth-child(3), .general-4:nth-child(3) {
+    background-color: #fafad2; /* Color para la segunda sede */
+}
+
+.general-1:nth-child(5), .general-4:nth-child(5) {
+    background-color: #f5f5f5; /* Color para la tercera sede */
+}
+
+/* Opcional: ajusta el tamaño del iframe para que se mantenga en proporción */
+.general-4 iframe {
+    width: 100%;
+    height: 400px; /* Ajusta la altura */
+    border: 2px solid #ccc; /* Agrega un borde alrededor del mapa */
+    border-radius: 10px; /* Bordes redondeados en el mapa */
+}
+
+/* Añadir márgenes entre los cuadros */
+.general + .general {
+    margin-top: 40px; /* Espacio entre los cuadros de las sedes */
+}
+
+footer {
+    padding: 50px 50px;
+    background-color: black;
+}
+
+.footer-content {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    flex-wrap: wrap; /* Para ajustar los elementos en pantallas pequeñas */
+    color: white;
+}
+
+.link {
+    margin-bottom: 20px;
+    width: 30%; /* Distribuye 3 columnas */
+}
+
+.link h3 {
+    font-size: 20px;
+    margin-bottom: 15px;
+    color: rgba(56, 128, 223, 0.836);
+}
+
+.link ul {
+    padding: 0;
+}
+
+.link ul li {
+    margin-bottom: 10px;
+}
+
+.link a {
+    font-size: 16px;
+    color: white;
+    display: block;
+    text-decoration: none;
+}
+
+.link a:hover {
+    color: crimson; /* Resalta los links al pasar */
+}
+
+/* Ajuste del logo */
+.colegio {
+    width: 150px; /* Ajusta el tamaño del logo */
+    margin-top: 15px;
+    display: block;
+}
+
+
+@media(max-width:768px){
+#menu:checked ~ .navbar{
+display: initial;
+}    
+
+.menu{
+padding: 30px;
+}
+
+.menu label{
+display: initial;
+}
+
+.menu .navbar{
+position: absolute;
+top: 100%;
+left: 0;
+right: 0;
+background-color: gray;
+display: none;
+}
+
+.menu .navbar ul li{
+width: 100%;
+}
+}

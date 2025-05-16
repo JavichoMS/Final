@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Formulario de Autenticación</title>
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" th:href="@{/css/STYLE INICIAR SESION.css}">
+    <script src="https://kit.fontawesome.com/a076d05399.js"></script>
+</head>
+<body>
+
+    <div class="container" id="container">
+        <!-- Formulario de Iniciar Sesión -->
+        <div class="form-container sign-in-container">
+            <form action="/iniciar-sesion" method="post">
+                <br><br><br><br>
+                <h2>Iniciar sesión </h2>
+                <input type="email" name="email" placeholder="Email" required>
+                <input type="password" name="password" placeholder="Password" required>
+                <button type="submit">INGRESAR</button>
+            </form>
+        </div>
+
+        <!-- Formulario de Crear Cuenta -->
+        <div class="form-container sign-up-container">
+            <form action="/registrarse" method="post">
+                <br><br><br>
+                <h2>Crear una cuenta</h2>
+                <input type="text" name="name" placeholder="Nombre" required>
+                <input type="email" name="email" placeholder="Email" required>
+                <input type="password" name="password" placeholder="Password" required>
+                <button type="submit">REGISTRARSE</button>
+            </form>
+        </div>
+
+        <div>
+            <p th:if="${success}" th:text="${success}" style="color: green;"></p>
+            <p th:if="${error}" th:text="${error}" style="color: red;"></p>
+        </div>
+
+        <!-- Panel de Bienvenida -->
+        <div class="panel right-panel">
+            <h2 id="panel-heading">¡Hola Administrador!</h2>
+            <center><p>Espero que estes muy bien por favor ingresa  su cuenta o registrese</p></center>
+            <button id="toggle-button" onclick="toggleForm()">CLIK AQUI</button>
+            <br><br><br><br>
+            <h2 id="panel-heading">Menu Principal</h2>
+            <a th:href="@{/}" style="background-color: #4fc3a1; color: white; text-decoration: none;">CLIK AQUI</a>
+        </div>
+    </div>
+
+    <script>
+        function toggleForm() {
+            const container = document.getElementById("container");
+            container.classList.toggle("move");
+        }
+    </script>
+
+</body>
+</html>

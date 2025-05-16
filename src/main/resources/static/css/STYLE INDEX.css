@@ -1,0 +1,380 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;800&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    text-decoration: none;
+    list-style: none;
+}
+
+/* Cambiar el tipo de letra */
+body {
+    background-color: white; /* Fondo blanco */
+}
+
+/* Color unificado para texto */
+body, h1, h2, h3, h4, h5, h6, p {
+    color: #333; /* Color gris oscuro */
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 15px;
+}
+
+.header {
+    background-image: linear-gradient(
+        rgba(0,0,0,0.7),
+        rgba(0,0,0,0.7)),
+        url(/images/img11.jpg);
+    background-position: center bottom;
+    background-repeat: no-repeat;
+    background-size: cover;
+    min-height: 70vh;
+    display: flex;
+    align-items: center;
+    color: white;
+}
+
+/* Bootstrap start */
+.accordion {
+    max-width: 800px; 
+    margin: 20px auto; 
+    padding: 10px; 
+}
+
+.Etapas {
+    font-size: 24px; 
+    text-align: center;
+    text-shadow: 0px 0px 5px rgba(0, 0, 0, 0.5);
+    animation: fadeIn 4s ease infinite; 
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(-10px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.carousel-container {
+    padding: 0 15px; /* Espacio a los lados */
+}
+
+.carousel-item img {
+    max-width: 100%; /* Asegúrate de que la imagen no exceda el contenedor */
+    height: auto; /* Mantiene la proporción de la imagen */
+}
+
+img {
+    max-height: 500px;  
+    object-fit: cover; 
+}
+/* Bootstrap END */
+
+.header-content {
+    text-align: center;
+}
+
+.header-content h1 {
+    font-size: 40px; /* Tamaño ajustado */
+    line-height: 50px;
+    color: white;
+    text-transform: uppercase;
+    margin-bottom: 35px;
+}
+
+.header-content p {
+    font-size: 16px;
+    color: white;
+    padding: 0 250px;
+    margin-bottom: 25px;
+}
+
+.btn-1 {
+    display: inline-block;
+    padding: 11px 35px;
+    background-color: indianred;
+    color: white;
+}
+
+.btn-1:hover {
+    background-color: coral;
+}
+
+.empresa {
+    padding: 100px 0;
+    background-color: white;
+    position: relative;
+}
+
+.empresa-content {
+    text-align: center;
+}
+
+.empresa-content h2 {
+    font-size: 40px; /* Tamaño ajustado */
+    line-height: 50px;
+    color: slategrey;
+    text-transform: uppercase;
+    padding: 0 250px;
+    margin-bottom: 15px;
+}
+
+.txt-p {
+    font-size: 16px;
+    color: gray;
+    padding: 0 250px;
+    margin-bottom: 35px;
+}
+
+.empresa-group {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 50px;
+}
+
+.empresa-1 {
+    padding: 0 25px;
+}
+
+.empresa-1 img {
+    width: 300px;
+}
+
+.empresa-img {
+    position: absolute;
+    top: 0;
+    right: 0;
+}
+
+.empresa-1 h3 {
+    color: gray;
+    font-size: 18px; /* Tamaño ajustado */
+    margin-bottom: 15px;
+}
+
+.services {
+    background-image: linear-gradient(
+        rgba(0,0,0,0.7),
+        rgba(0,0,0,0.7)),
+        url(https://i.cdn29.hu/apix_collect_c/ngg_images/2404/01/microsoft_teams_teams_195432_1_original_760x425_cover.jpg);
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-attachment: fixed;
+    padding: 100px 0;
+}
+
+.services-content {
+    text-align: center;
+}
+
+.services-content h2 {
+    font-size: 40px; /* Tamaño ajustado */
+    line-height: 50px;
+    color: white;
+    text-transform: uppercase;
+    margin-bottom: 50px;
+}
+
+.services-content p {
+    font-size: 16px;
+    color: white;
+    margin-bottom: 50px;
+    padding: 0 100px;
+}
+
+.services-group {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 50px;
+}
+
+.services-1 {
+    padding: 0 100px;
+}
+
+.services-1 img {
+    width: 150px;
+    margin-bottom: 15px;
+}
+
+.services-1 h3 {
+    color: white;
+    font-size: 18px; /* Tamaño ajustado */
+}
+
+.general {
+    display: flex;
+}
+
+.general-1 {
+    width: 50%;
+    padding: 100px 250px 100px 100px;
+    background-color: rgb(221, 235, 172);
+}
+
+
+h2 {
+    font-size: 40px; /* Tamaño ajustado */
+    line-height: 50px;
+    color: gray;
+    text-transform: uppercase;
+    margin-bottom: 20px;
+}
+
+p {
+    font-size: 16px;
+    color: gray;
+    margin: 25px 0 45px 0;
+}
+
+.blog {
+    padding: 100px 0;
+    text-align: center;
+}
+
+.blog-content {
+    display: flex;
+    justify-content: space-between;
+}
+
+.blog-1 {
+    padding: 15px 55px;
+}
+
+.blog-1 img {
+    width: 300px;
+    border-radius: 15px;
+    margin-bottom: 15px;
+}
+
+.blog-1 h3 {
+    font-size: 25px;
+    color: gray;
+}
+
+/* Formato para pantalla delgada */
+@media(max-width:991px) {
+    .menu {
+        padding: 30px;
+    }
+
+    .menu label {
+        display: initial;
+    }
+
+    .menu .navbar {
+        position: absolute;
+        top: 100%;
+        left: 0;
+        right: 0;
+        background-color: gray;
+        display: none;
+    }
+
+    .menu .navbar ul li {
+        width: 100%;
+    }
+
+    #menu:checked ~ .navbar {
+        display: initial;
+    }
+
+    .header {
+        min-height: 0vh;
+    }
+
+    .header-content {
+        padding: 120px 0;
+    }
+
+    .header-content p {
+        padding: 0;
+    }
+
+    .empresa {
+        padding: 30px;
+    }
+
+    .empresa-content h2 {
+        padding: 0;
+    }
+
+    .txt-p {
+        padding: 0;
+    }
+
+    .empresa-group {
+        flex-direction: column;
+        margin-bottom: 0;
+    }
+
+    .empresa-img {
+        display: none;
+    }
+
+    .services {
+        padding: 30px;
+    }
+
+    .services-content p {
+        padding: 0;
+    }
+
+    .services-group {
+        flex-direction: column;
+        margin-bottom: 0;
+    }
+
+    .services-1 {
+        margin-bottom: 25px;
+    }
+
+    .general {
+        flex-direction: column;
+    }
+
+    .general-1 {
+        width: 100%;
+        padding: 30px;
+        text-align: center;
+    }
+
+    .general-2, .general-3 {
+        display: none;
+    }
+
+    .blog {
+        padding: 30px;
+    }
+
+    .blog-content {
+        flex-direction: column;
+    }
+
+    .blog-1 {
+        padding: 0;
+    }
+
+    .footer {
+        padding: 30px 0;
+    }
+
+    .footer-content {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .colegio {
+        width: 120px; /* Ajusta el tamaño del logo en móviles */
+        margin-left: 38%;
+    }
+}

@@ -1,0 +1,243 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org" lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Nosotros | I.E.P San Agustin</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" 
+        integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" 
+        crossorigin="anonymous">
+    <link rel="stylesheet" th:href="@{/css/FRAGMENTS.css}">
+    <style>
+        *{
+            list-style-type: none;
+            text-decoration: none;
+        }
+        body {
+            color: gray; 
+            animation: fadeIn 0.5s; 
+            overflow-x: hidden;
+        }
+        @keyframes fadeIn {
+            from { opacity: 0; }
+            to { opacity: 1; }
+        }
+        .services-1 {
+            display: flex;
+            justify-content: space-around; 
+            margin-bottom: 20px;
+        }
+        .services-1 button {
+            border: 1px solid black;
+            margin: 0 5px; 
+            transition: transform 0.3s, background-color 0.3s; 
+        }
+        .services-1 button:hover {
+            transform: scale(1.05); 
+            background-color: #f8f9fa;
+        }
+        .flex-container {
+            display: flex;
+            justify-content: space-between; 
+            margin: 20px 0;
+            opacity: 0; 
+            animation: fadeIn 1s forwards; 
+        }
+        .text-center {
+            text-align: center;
+        }
+        .scrollspy-example {
+            padding: 20px; 
+        }
+        .container-custom {
+            max-width: 800px;
+            margin: auto; 
+        }
+        /* Ajustes para pantallas pequeñas */
+        @media (max-width: 991px) {
+            .flex-container {
+                flex-direction: row; 
+                justify-content: space-between; 
+            }
+            .scrollspy-example {
+                height: auto; 
+            }
+            #list-example {
+                margin-bottom: 20px; 
+            }
+            .card {
+                width: 90%; 
+                margin: auto; 
+            }
+            .list-group {
+                width: 45%; 
+            }
+            .scrollspy-example {
+                width: 50%; 
+            }
+        }
+        .image-row {
+            display: flex;
+            justify-content: space-between;
+            opacity: 0; 
+            animation: fadeIn 1s forwards; 
+            margin-bottom: 15px; 
+        }
+    </style>
+</head>
+
+<body data-bs-spy="scroll" data-bs-target="#list-example" data-bs-offset="0" tabindex="0">
+
+    <!-- Barra de navegación -->
+    <div th:replace="fragments :: header"></div>
+
+    <main class="services">
+        <div class="services-content container">
+            <h2 class="mt-5 mb-5">Nuestras Sedes</h2>
+            <div class="services-1">
+                <button class="btn btn-light" data-bs-toggle="offcanvas" data-bs-target="#offcanvasSedeCentral" aria-controls="offcanvasSedeCentral">
+                    Sede Santa Anita
+                </button>
+                <button class="btn btn-light" data-bs-toggle="offcanvas" data-bs-target="#offcanvasSedeNorte" aria-controls="offcanvasSedeNorte">
+                    Sede Lurigancho-Chosica
+                </button>
+            </div>
+
+            <!-- Offcanvas para las sedes -->
+            <div class="offcanvas offcanvas-end" tabindex="-1" id="offcanvasSedeCentral" aria-labelledby="offcanvasSedeCentralLabel">
+                <div class="offcanvas-header">
+                    <h5 id="offcanvasSedeCentralLabel">Sede Central</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+                </div>
+                <div class="offcanvas-body">
+                    <p><strong>Nivel:</strong> Inicial y Primaria</p>
+                    <p><strong>Dirección:</strong> Urb. Las Praderas de Santa Anita, Primera Etapa. Manzana LL, lote B. Santa Anita</p>
+                    <p>Descripción: La Sede del Colegio San Agustin es conocida por su ambiente académico vibrante y modernas instalaciones.</p>
+                    <div class="image-row" style="animation-delay: 0s;">
+                        <div class="col-12">
+                            <img th:src="@{/images/sede1.jpg}" alt="Sede Central" class="img-fluid mb-2" />
+                        </div>
+                    </div>
+                    <div class="image-row" style="animation-delay: 0.1s;">
+                        <div class="col-12">
+                            <img th:src="@{/images/sede1_2.jpg}" alt="Sede Central 2" class="img-fluid mb-2" />
+                        </div>
+                    </div>
+                    <div class="image-row" style="animation-delay: 0.2s;">
+                        <div class="col-12">
+                            <img th:src="@{/images/sede1_3.jpeg}" alt="Sede Central 3" class="img-fluid mb-2" />
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="offcanvas offcanvas-end" tabindex="-1" id="offcanvasSedeNorte" aria-labelledby="offcanvasSedeNorteLabel">
+                <div class="offcanvas-header">
+                    <h5 id="offcanvasSedeNorteLabel">Sede Norte</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+                </div>
+                <div class="offcanvas-body">
+                    <p><strong>Nivel:</strong> Inicial y Primaria</p>
+                    <p><strong>Dirección:</strong> Calle triunfadores Mz B lote 4 Asociacion Virgen de Cocharcas Nieveria</p>
+                    <p>Descripción: En San Agustin, se destaca por su enfoque en la innovación educativa.</p>
+                    <div class="image-row" style="animation-delay: 0s;">
+                        <div class="col-12">
+                            <img th:src="@{/images/sede2.jpg}" alt="Sede Norte" class="img-fluid mb-2" />
+                        </div>
+                    </div>
+                    <div class="image-row" style="animation-delay: 0.1s;">
+                        <div class="col-12">
+                            <img th:src="@{/images/sede2_2.jpeg}" alt="Sede Norte 2" class="img-fluid mb-2" />
+                        </div>
+                    </div>
+                    <div class="image-row" style="animation-delay: 0.2s;">
+                        <div class="col-12">
+                            <img th:src="@{/images/sede2_3.jpg}" alt="Sede Norte 3" class="img-fluid mb-2" />
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <p class="m-3 p-5">
+                En el corazón de la exploración del conocimiento y la excelencia académica, el I.E.P San Agustin
+                se alza como una institución comprometida con la formación de líderes del mañana.
+            </p>
+            <div class="text-center">
+                <a th:href="@{/sedes}" class="btn btn-primary"> INFORMACIÓN</a>
+            </div>
+        </div>
+    </main>
+
+    <main class="services2">
+        <div class="services-content container-custom">
+            <h2 class="mt-5 mb-5">¿Por qué estudiar en el I.E.P San Agustin?</h2>
+            <div class="flex-container">
+                <div id="list-example" class="list-group col-12 col-md-4">
+                    <a class="list-group-item list-group-item-action" href="#item1">Educación moderna con acreditación internacional</a>
+                    <a class="list-group-item list-group-item-action" href="#item2">La infraestructura y tecnología más moderna del mercado</a>
+                    <a class="list-group-item list-group-item-action" href="#item3">Ayuda económica, académica y emocional</a>
+                </div>
+                <div class="scrollspy-example col-12 col-md-8">
+                    <h4 id="item1" class="mt-4">Educación moderna con acreditación internacional</h4>
+                    <p>En el I.E.P San Agustin, garantizamos una educación de alta calidad que cumple con los estándares internacionales, preparando a nuestros estudiantes para un mundo globalizado.</p>
+
+                    <h4 id="item2" class="mt-4">La infraestructura y tecnología más moderna del mercado</h4>
+                    <p>Contamos con instalaciones de vanguardia y tecnología innovadora para facilitar el aprendizaje y la creatividad en nuestros estudiantes.</p>
+
+                    <h4 id="item3" class="mt-4">Ayuda económica, académica y emocional</h4>
+                    <p>Ofrecemos diversas modalidades de apoyo económico y emocional para asegurar que todos nuestros estudiantes puedan alcanzar su máximo potencial.</p>
+                </div>
+            </div>
+            <div class="text-center">
+                <a th:href="@{/comunidad}" class="btn btn-primary"> INFORMACIÓN</a>
+            </div>
+        </div>
+    </main>
+
+    <main class="services3">
+        <div class="services-content container-custom">
+            <h2 class="mt-5 mb-5">¡Conoce los beneficios!</h2>
+            <div class="row">
+                <div class="col-12 col-md-4">
+                    <div class="card text-center bg-light mb-3">
+                        <div class="card-body">
+                            <h3>Becas</h3>
+                            <p>Aprovecha las oportunidades educativas con las becas ofrecidas por la Institución.</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-12 col-md-4">
+                    <div class="card text-center bg-light mb-3">
+                        <div class="card-body">
+                            <h3>Atención</h3>
+                            <p>Experimenta atención personalizada en el colegio con nuestros Personal.</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-12 col-md-4">
+                    <div class="card text-center bg-light mb-3">
+                        <div class="card-body">
+                            <h3>Campus</h3>
+                            <p>Explora el campus donde la ciencia y la creatividad se encuentran cada momento.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="text-center">
+                <a th:href="@{/beneficios}" class="btn btn-primary"> INFORMACIÓN</a>
+            </div>
+        </div>
+    </main>
+    <br><br>
+
+    <!-- PIE DE PAGINA -->
+    <div th:replace="fragments :: footer"></div>
+
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.10.2/dist/umd/popper.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+</body>
+</html>

@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org" lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>I.E.P San Agustin</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" 
+        integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" 
+        crossorigin="anonymous">
+    <link rel="stylesheet" th:href="@{/css/STYLE INDEX.css}">
+    <link rel="stylesheet" th:href="@{/css/FRAGMENTS.css}">
+</head>
+<body>
+
+    <!-- ENCABEZADO -->
+    <div th:replace="fragments :: header"></div>
+
+    <!-- INICIO -->
+    <header class="header">
+        <div class="header-content container text-center">
+            <h1>FORMACIÓN <br> ACADÉMICA</h1>
+            <p>Nuestra institución tiene más de 120 años formando generaciones en I.E.P San Agustin...</p>
+            <a th:href="@{/historia}" class="btn btn-danger">VER MÁS</a>
+        </div>
+    </header>
+
+    <!-- APARTADO MISION,VISION Y VALORES -->
+    <section class="empresa py-5">
+        <div class="empresa-content container text-center">
+            <h2>La mejor propuesta educativa</h2>
+            <p class="txt-p">Somos una de las organizaciones educativas más grandes del país brindando una Educación de Calidad</p>
+            <div class="row mt-4">
+                <div class="col-md-4 mb-4">
+                    <div class="card border border-primary animate__animated animate__bounceIn">
+                        <div class="card-body">
+                            <h3 class="card-title">Misión</h3>
+                            <p class="card-text">Nuestra misión es ofrecer una educación integral.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4 mb-4">
+                    <div class="card border border-success animate__animated animate__bounceIn">
+                        <div class="card-body">
+                            <h3 class="card-title">Visión</h3>
+                            <p class="card-text">Ser una institución educativa líder a nivel Nacional.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4 mb-4">
+                    <div class="card border border-warning animate__animated animate__bounceIn">
+                        <div class="card-body">
+                            <h3 class="card-title">Valores</h3>
+                            <p class="card-text">Fomentar el respeto como base de la convivencia.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- animaciones -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css">
+
+    <!-- APARTADO ELEMENTOS CLAVE -->
+    <main class="services py-5">
+        <div class="services-content container text-center">
+            <h2>Elementos Clave para un Aprendizaje Integral</h2>
+            <div class="row"> 
+                <div class="col-md-4 mb-4">
+                    <div class="card">
+                        <img th:src="@{/images/icon2.png}" class="card-img-top animate__animated animate__bounce infinite" alt="Biblioteca" style="width: 80%; margin: auto;">
+                        <div class="card-body">
+                            <h3 class="card-title">Biblioteca</h3>
+                        </div> 
+                    </div>
+                </div>
+                <div class="col-md-4 mb-4">
+                    <div class="card">
+                        <img th:src="@{/images/icon3.png}" class="card-img-top animate__animated animate__bounce infinite" alt="Laboratorios de Ciencias" style="width: 80%; margin: auto;">
+                        <div class="card-body">
+                            <h3 class="card-title">Laboratorio</h3>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4 mb-4">
+                    <div class="card">
+                        <img th:src="@{/images/icon4.png}" class="card-img-top animate__animated animate__bounce infinite" alt="Áreas Recreativas" style="width: 80%; margin: auto;">
+                        <div class="card-body">
+                            <h3 class="card-title">Recreo</h3>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <br>
+            <a th:href="@{/elementos-clave}" class="btn btn-danger">INFORMACIÓN</a>
+        </div>
+    </main>
+
+    <!-- APARTADO BLOG -->
+    <section class="blog container py-5">
+        <h2>BLOG</h2>
+        <p>Activa tu potencial</p>
+        <div class="row">
+            <div class="col-md-4 mb-3">
+                <div class="card border-primary">
+                    <div class="card-body">
+                        <div class="d-flex align-items-center">
+                            <i class="fas fa-seedling fa-2x me-2 text-primary"></i>
+                            <h3 class="card-title">Sembrando el Cambio</h3>
+                        </div>
+                        <p class="card-text">Destaca iniciativas donde los estudiantes participan.</p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4 mb-3">
+                <div class="card border-success">
+                    <div class="card-body">
+                        <div class="d-flex align-items-center">
+                            <i class="fas fa-recycle fa-2x me-2 text-success"></i>
+                            <h3 class="card-title">Creando Conciencia</h3>
+                        </div>
+                        <p class="card-text">Explora programas educativos que fomentan prácticas sostenibles.</p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4 mb-3">
+                <div class="card border-warning">
+                    <div class="card-body">
+                        <div class="d-flex align-items-center">
+                            <i class="fas fa-comments fa-2x me-2 text-warning"></i>
+                            <h3 class="card-title">Voces Jóvenes</h3>
+                        </div>
+                        <p class="card-text">Discute cómo empoderar a los estudiantes para que se conviertan en líderes.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- APARTADO MATRICULA -->
+    <section class="info-matricula py-5 text-center">
+        <h2>I.E.P San Agustin</h2>
+        <p>Con 2 sedes en Lima, nuestro principal objetivo es brindar educación de alta calidad y fomentar el liderazgo</p>
+        <div class="container mt-4">
+            <div class="card mx-auto" style="max-width: 800px; background-color: #a6aaad;">
+                <div class="card-body d-flex align-items-center">
+                    <div class="text-left" style="flex: 1;">
+                        <h5 class="card-title">¿Quieres saber más sobre nuestro proceso de matrícula 2026?</h5>
+                        <a th:href="@{/iniciar-sesion}" target="_blank" class="btn btn-danger">Regístrate aquí</a>
+                    </div>
+                    <img th:src="@{/images/icon5.png}" class="img-fluid" alt="error" style="max-width: 150px; margin-left: 20px;">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- PIE DE PAGINA -->
+    <div th:replace="fragments :: footer"></div>
+
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.10.2/dist/umd/popper.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+</body>
+</html>

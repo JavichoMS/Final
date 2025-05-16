@@ -1,0 +1,205 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org" lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Matricula Educativa</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet">
+    <style>
+        body {
+            font-family: 'Arial', sans-serif;
+            background-color: #f8f9fa;
+            padding: 20px;
+        }
+
+        .formulario-container {
+            max-width: 900px;
+            margin: auto;
+            background: #ffffff;
+            padding: 30px;
+            border-radius: 10px;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+        }
+
+        .form-title {
+            background-color: #ffc107;
+            color: #ffffff;
+            font-size: 1.5rem;
+            text-align: center;
+            padding: 10px 0;
+            border-radius: 5px;
+            margin-bottom: 20px;
+        }
+
+        .form-section-title {
+            background-color: #ffc107;
+            color: #ffffff;
+            padding: 5px 10px;
+            border-radius: 5px;
+            font-weight: bold;
+            margin-bottom: 15px;
+        }
+
+        .form-control, .form-select {
+            border-radius: 5px;
+        }
+
+        .btn-submit {
+            background-color: #ffc107;
+            color: #ffffff;
+            border: none;
+            padding: 10px 20px;
+            font-size: 1rem;
+            border-radius: 5px;
+            transition: background-color 0.3s ease;
+        }
+
+        .btn-submit:hover {
+            background-color: #e0a800;
+        }
+
+        .form-group {
+            margin-bottom: 15px;
+        }
+    </style>
+</head>
+<body>
+    <div class="formulario-container">
+        <h1 class="form-title">Formulario de Matrícula</h1>
+        <form th:action="@{/procesarFormulario}" method="post">
+            <!-- Datos del Apoderado -->
+            <div class="form-section">
+                <div class="form-section-title">Datos del Apoderado</div>
+                <div class="row g-4">
+                    <div class="col-md-3">
+                        <label for="tipoDocumento" class="form-label">Tipo de Documento</label>
+                        <select id="tipoDocumento" name="tipoDocumento" class="form-select">
+                            <option value="DNI">DNI</option>
+                            <option value="Pasaporte">Pasaporte</option>
+                        </select>
+                    </div>
+                    <div class="col-md-3">
+                        <label for="numeroDocumento" class="form-label">Número de Documento</label>
+                        <input type="text" id="numeroDocumento" name="numeroDocumento" class="form-control" required>
+                    </div>
+                    <div class="col-md-3">
+                        <label for="apellidoPaterno" class="form-label">Apellido Paterno</label>
+                        <input type="text" id="apellidoPaterno" name="apellidoPaterno" class="form-control" required>
+                    </div>
+                    <div class="col-md-3">
+                        <label for="apellidoMaterno" class="form-label">Apellido Materno</label>
+                        <input type="text" id="apellidoMaterno" name="apellidoMaterno" class="form-control" required>
+                    </div>
+                </div> <br>
+                <div class="row g-4">
+                    <div class="col-md-3">
+                        <label for="nombres" class="form-label">Nombres</label>
+                        <input type="text" id="nombres" name="nombres" class="form-control" required>
+                    </div>
+                    <div class="col-md-3">
+                        <label for="telefonoMovil" class="form-label">Teléfono Móvil</label>
+                        <input type="text" id="telefonoMovil" name="telefonoMovil" class="form-control">
+                    </div>
+                    <div class="col-md-3">
+                        <label for="correoElectronico" class="form-label">Correo Electrónico</label>
+                        <input type="email" id="correoElectronico" name="correoElectronico" class="form-control">
+                    </div>
+                    <div class="col-md-3">
+                        <label for="direccion" class="form-label">Dirección*</label>
+                        <input type="text" id="direccion" name="direccion" class="form-control" required>
+                    </div>
+                </div>
+            </div> <br>
+
+            <!-- Datos del Alumno -->
+            <div class="form-section">
+                <div class="form-section-title">Datos del Alumno</div>
+                <div class="row g-4">
+                    <div class="col-md-3">
+                        <label for="tipoDocumentoAlumno" class="form-label">Tipo de Documento</label>
+                        <select id="tipoDocumentoAlumno" name="tipoDocumentoAlumno" class="form-select">
+                            <option value="DNI">DNI</option>
+                            <option value="Pasaporte">Pasaporte</option>
+                        </select>
+                    </div>
+                    <div class="col-md-3">
+                        <label for="numeroDocumentoAlumno" class="form-label">Número de Documento</label>
+                        <input type="text" id="numeroDocumentoAlumno" name="numeroDocumentoAlumno" class="form-control" required>
+                    </div>
+                    <div class="col-md-3">
+                        <label for="apellidoPaternoAlumno" class="form-label">Apellido Paterno</label>
+                        <input type="text" id="apellidoPaternoAlumno" name="apellidoPaternoAlumno" class="form-control" required>
+                    </div>
+                    <div class="col-md-3">
+                        <label for="apellidoMaternoAlumno" class="form-label">Apellido Materno</label>
+                        <input type="text" id="apellidoMaternoAlumno" name="apellidoMaternoAlumno" class="form-control" required>
+                    </div>
+                </div><br>
+                <div class="row g-4">
+                    <div class="col-md-3">
+                        <label for="nombresAlumno" class="form-label">Nombres</label>
+                        <input type="text" id="nombresAlumno" name="nombresAlumno" class="form-control" required>
+                    </div>
+                    <div class="col-md-3">
+                        <label for="fechaNacimiento" class="form-label">Fecha de Nacimiento</label>
+                        <input type="date" id="fechaNacimiento" name="fechaNacimiento" class="form-control">
+                    </div>
+                    <div class="col-md-3">
+                        <label for="sexo" class="form-label">Sexo</label>
+                        <select id="sexo" name="sexo" class="form-select">
+                            <option value="Masculino">Masculino</option>
+                            <option value="Femenino">Femenino</option>
+                        </select>
+                    </div>
+                    <div class="col-md-3">
+                        <label for="nacionalidad" class="form-label">Nacionalidad</label>
+                        <select id="nacionalidad" name="nacionalidad" class="form-select">
+                            <option value="Perú">Perú</option>
+                            <option value="Otros">Otros</option>
+                        </select>
+                    </div>
+                </div>
+            </div><br>
+
+            <!-- Datos de la Matrícula -->
+            <div class="form-section">
+                <div class="form-section-title">Datos de la Matrícula</div>
+                <div class="row g-4">
+                    <div class="col-md-3">
+                        <label for="sede" class="form-label">Sede</label>
+                        <select id="sede" name="sede" class="form-select">
+                            <option value="Santa Anita">Santa Anita</option>
+                            <option value="Lurigancho-Chosica">Lurigancho-Chosica</option>
+                        </select>
+                    </div>
+                    <div class="col-md-3">
+                        <label for="nivel" class="form-label">Nivel</label>
+                        <select id="nivel" name="nivel" class="form-select">
+                            <option value="Inicial">Inicial</option>
+                            <option value="Primaria">Primaria</option>
+                        </select>
+                    </div>
+                    <div class="col-md-3">
+                        <label for="grado" class="form-label">Grado</label>
+                        <select id="grado" name="grado" class="form-select">
+                            <option value="3 años">3 años</option>
+                            <option value="4 años">4 años</option>
+                            <option value="5 años">5 años</option>
+                            <option value="1er">1er</option>
+                            <option value="2do">2do</option>
+                            <option value="3er">3er</option>
+                            <option value="4to">4to</option>
+                            <option value="5to">5to</option>
+                            <option value="6to">6to</option>
+                        </select>
+                    </div>
+                </div>
+            </div>
+
+            <div class="d-flex justify-content-center mt-4">
+                <button type="submit" class="btn-submit">Enviar Solicitud</button>
+            </div>
+        </form>
+    </div>
+</body>
+</html>

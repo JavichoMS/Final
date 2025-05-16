@@ -1,0 +1,144 @@
+@import url('https://fonts.googleapis.com/css2?family=Reddit+Sans:ital@0;1&display=swap');
+
+* {
+    box-sizing: border-box;
+    text-decoration: none;
+    list-style: none;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    font-family: 'Reddit Sans', sans-serif;
+    background: url();
+    height: 100vh;
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.header {
+    background-image: linear-gradient(rgba(0,0,0,0.7), rgba(0,0,0,0.7)), url();
+    background-position: center bottom;
+    background-repeat: no-repeat;
+    background-size: cover;
+    min-height: 20vh;
+    display: flex;
+    align-items: center;
+    color: white;
+}
+
+/* Carrusel */
+.carousel-caption {
+    background-color: rgba(0, 0, 0, 0.6);
+    padding: 10px;
+    border-radius: 5px;
+}
+
+.carousel-item img {
+    height: 550px; /* Ajusta la altura deseada */
+    object-fit: cover; /* Asegura que la imagen cubra el área sin distorsionarse */
+    width: 100%; /* Mantiene el ancho al 100% */
+}
+
+/* Eventos */
+.card {
+    border: 2px solid #007bff; /* Color del borde */
+    border-radius: 8px; /* Bordes curvos */
+    transition: transform 0.3s, box-shadow 0.3s; /* Efecto de animación */
+}
+
+.card-body {
+    padding: 15px; /* Espaciado interno reducido */
+}
+
+.card:hover {
+    transform: translateY(-5px); /* Elevación al pasar el ratón */
+    box-shadow: 0 4px 15px rgba(0, 123, 255, 0.3); /* Sombra al pasar el ratón */
+}
+
+.text-center {
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
+
+/* Ajuste en títulos de eventos */
+.card-title {
+    font-size: 20px; /* Tamaño de título más pequeño */
+    margin-bottom: 5px; /* Espaciado inferior */
+}
+
+.card-text {
+    font-size: 14px; /* Tamaño de párrafo más pequeño */
+}
+
+/* Video Promocional */
+.video-container {
+    max-width: 800px; /* Ancho máximo del contenedor */
+    margin: 0 auto;   /* Centra el contenedor en la página */
+    padding: 20px;    /* Espaciado interno */
+}
+
+.video-container iframe {
+    width: 100%; /* El iframe se adapta al contenedor */
+    height: 450px; /* Ajusta la altura del video */
+}
+
+/* Opiniones */
+.Opiniones {
+    text-align: center;
+    color: black;
+    font-size: 18px; /* Tamaño más pequeño */
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+}
+
+.card-group {
+    padding: 10px;
+    margin-right: 20px; /* Reducido para que no haya tanto espacio */
+    margin-left: 20px; /* Reducido para que no haya tanto espacio */
+}
+
+.card-footer {
+    font-size: 16px; /* Tamaño más pequeño */
+}
+
+/* Títulos de secciones */
+h2 {
+    font-size: 24px; /* Tamaño más pequeño */
+    line-height: 30px; /* Ajustado */
+    color: black;
+    text-transform: uppercase;
+    margin-bottom: 20px;
+}
+
+p {
+    font-size: 18px; /* Tamaño más pequeño */
+    color: rgb(26, 23, 23); /* Cambiado a negro */
+    margin: 25px 0 45px 0;
+}
+
+/* Botón */
+.btn-1 {
+    display: inline-block;
+    padding: 11px 35px;
+    background-color: indianred;
+    color: white;
+    text-transform: uppercase;
+}
+
+.btn-1:hover {
+    background-color: coral;
+}
+
+/* Media Queries para responsividad */
+@media (max-width: 768px) {
+    .video-container {
+        padding: 10px; /* Menos espaciado en pantallas pequeñas */
+    }
+    .video-container iframe {
+        height: 300px; /* Ajusta la altura del video en pantallas pequeñas */
+    }
+    
+}
+

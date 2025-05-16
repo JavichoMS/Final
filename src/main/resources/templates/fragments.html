@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org" lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fragmentos</title>
+    <link rel="stylesheet" th:href="@{/css/FRAGMENTS.css}">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+</head>
+<body>
+
+    <header th:fragment="header" class="bg-dark text-white">
+        <nav class="navbar navbar-expand-lg navbar-light bg-dark">
+            <div class="container-fluid">
+                <div class="d-flex align-items-center">
+                    <img width="80" height="100" th:src="@{/images/logo1.png}" alt="school" class="me-5 m-3"/> <!-- Espaciado ajustado -->
+                    <a class="navbar-brand text-white me-5" th:href="@{/}" style="font-size: 1.3rem;">I.E.P San Agustin</a> <!-- Tamaño de letra aumentado -->
+                </div>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                    <ul class="navbar-nav ms-auto mb-2 mb-lg-0" style="margin-left: 5px;"> <!-- Ajuste del margen a 5px -->
+                        <li class="nav-item">
+                            <a class="nav-link active text-light" aria-current="page" th:href="@{/preguntas}">Preguntas Frecuentes</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link text-light" th:href="@{/cursos}">Plan de Estudios Escolar</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link text-light" th:href="@{/nosotros}">Nosotros</a>
+                        </li>
+                        <li class="nav-item dropdown">
+                            <a class="nav-link dropdown-toggle matricula text-light" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                                Matrícula 2025
+                            </a>
+                            <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+                                <li><a class="dropdown-item" th:href="@{/matricula2025}">Matricula</a></li>
+                                <li><a class="dropdown-item" th:href="@{/iniciar-sesion}">Administradores</a></li>
+                            </ul>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+    </header>
+    
+    <main>
+        <!-- Contenido principal de la página -->
+    </main>
+    
+    <footer th:fragment="footer">
+        <div class="footer-content">
+            <div class="link">
+                <h3>Educación</h3>
+                <ul>
+                    <li><a href="#">I.E.P San Agustin</a></li>
+                    <li><img class="colegio" th:src="@{/images/logo1.png}" alt="logo_institucional"></li>
+                </ul>
+            </div>
+            <div class="link">
+                <h3>Horario de Atención</h3>
+                <ul>
+                    <li><a href="#">De lunes a viernes de 07:30 a 15:00 h</a></li>
+                    <li><a href="#">Central telefónica: 074-232767 y 094-246758</a></li>
+                    <li><a href="#">Celular/whatsapp: 960 441 264</a></li>
+                    <li><a href="#">Oficina de Recepción: Ate, Santa Clara</a></li>
+                    <li><a href="#">Correo electrónico: josuejeanpalomino@gmail.com</a></li>
+                </ul>
+            </div>
+            <div class="link">
+                <h3>Información</h3>
+                <ul>
+                    <li><a href="#">Contáctanos</a></li>
+                    <li><a href="#">Libros</a></li>
+                    <li><a href="#">Trabaja con nosotros</a></li>
+                </ul>
+            </div>
+        </div>
+    </footer>
+
+<script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.3/dist/umd/popper.min.js"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+
+</body>
+</html>

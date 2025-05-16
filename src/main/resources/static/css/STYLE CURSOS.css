@@ -1,0 +1,18 @@
+body {
+    font-family: Arial, sans-serif;
+    background-image: url();
+    background-size: cover;
+    background-position: center;
+}
+
+.list-group-item {
+    cursor: pointer;
+}
+
+h1 {
+    margin-top: 15px;
+}
+
+.inicio {
+    margin-top: 15px;
+}

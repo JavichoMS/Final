@@ -1,0 +1,27 @@
+body {
+    background-color: #FFD43B; /* Color por defecto */
+    color: #6c757d;
+}
+.header {
+    background-color: #413c3c;
+    padding: 20px;
+}
+.carousel-item img {
+    max-height: 400px; /* Ajusta la altura máxima deseada */
+    object-fit: cover; /* Asegura que la imagen cubra el área sin distorsión */
+    width: 100%; /* Asegura que la imagen ocupe el ancho completo */
+}
+.inicio {
+    background-color: #fffdfd; 
+    border: 2px solid #0d6efd;
+    border-radius: 15px; 
+    padding: 10px 20px; 
+    font-size: 1.2rem; 
+    color: #0d6efd; 
+    transition: background-color 0.3s ease; /* Transición para el cambio de color */
+    margin-top: 15px; 
+    text-decoration: none; 
+}
+.inicio:hover {
+    background-color: #6991bd9a; 
+}
